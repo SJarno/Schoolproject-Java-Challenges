@@ -9,14 +9,14 @@ Mostly for flexing out my Java-skills, and trying some new stuff.
 I'll be making slightly more complicated versions out of some of these, but as of now, this will do.
 
 Projects are:
-- Challenge I [testi](#challenge-i---rock-paper-scissors)
-- Challenge II
-- Challenge III
-- Challenge IV
-- Challenge V
-- Challenge VI
-- Challenge VII
-- Challenge VIII
+- [Challenge I](#challenge-i---rock-paper-scissors)
+- [Challenge II]()
+- [Challenge III]()
+- [Challenge IV]()
+- [Challenge V]()
+- [Challenge VI]()
+- [Challenge VII]()
+- [Challenge VIII]()
 
 
 ## Challenge I - Rock, Paper, Scissors
