@@ -3,7 +3,10 @@ package rockpaperscissors;
 public class App {
     
     public static void main(String[] args) {
-        System.out.println("Testihomma");
+        Player testi = new Player("g"){
+            
+        };
+        System.out.println(testi.getId());
         
     }
     

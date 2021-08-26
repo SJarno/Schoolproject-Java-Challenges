@@ -5,11 +5,26 @@ public abstract class Player {
     private int losses;
     private String id;
 
-    public Player() {
+    public Player(String id) {
         this.wins = 0;
         this.losses = 0;
-        this.id = "";
+        this.id = id;
 
+    }
+    public String getId() {
+        return this.id;
+    }
+    public int getWinnings() {
+        return this.wins;
+    }
+    public void addWin() {
+        this.wins += 1;
+    }
+    public int getLosses() {
+        return this.losses;
+    }
+    public void addLoss() {
+        this.losses += 1;
     }
 
     
