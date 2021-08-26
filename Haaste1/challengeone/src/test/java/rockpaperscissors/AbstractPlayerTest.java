@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class AbstractPlayerTest {
 
@@ -16,10 +18,11 @@ public class AbstractPlayerTest {
             
         };
     }
-    @Test
-    public void testName() {
+    @ParameterizedTest
+    @ValueSource(strings =  {"mikko", "johannes", "kuukkeli"})
+    public void testName(String name) {
         assertEquals("abstraction", player.getId());
-        assertNotEquals("rubberduckie", player.getId());
+        assertNotEquals(name, player.getId());
     }
     @Test
     public void testWinnsIsZero() {
