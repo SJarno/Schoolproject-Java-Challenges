@@ -25,6 +25,25 @@ Projects are:
 
 ## Challenge I - Rock, Paper, Scissors
 ### About
+
+
+
+### Assignment
+Kivi, paperi ja sakset on tunnettu kahden tai useamman osanottajan leikki tai peli. Kirjoita ohjelma, jossa pelataan tietokonetta vastaan.
+ 
+Voittaja ratkeaa seuraavan kaavan mukaisesti:
+
+Kivi voittaa sakset (kivellä voi rikkoa sakset eikä saksilla voi leikata kiveä)
+Paperi voittaa kiven (kiven voi peittää paperilla)
+Sakset voittaa paperin (saksilla voi leikata paperia)
+Mikäli molemmat saavat saman, tilanne on tasapeli ja pelikierros uusitaan.
+
+Ohjelman kulku olkoon seuraava:
+
+Tietokone aloittaa kysymällä: 1 = Kivi, 2 = Paperi, 3 = Sakset ?
+Pelaaja valitsee yhden vaihtoehdoista, johon tietokone vastaa omalla valinnalla.
+Ohjelma julistaa voittajan
+
 ### Features
 
 ## Challenge II - Calories vs Joules
