@@ -31,7 +31,7 @@ Projects are:
 ### About
 ### Features
 
-## Challenge III - Meatpie proble
+## Challenge III - Meatpie problem
 ### About
 ### Features
 
