@@ -10,7 +10,7 @@ I'll be making slightly more complicated versions out of some of these, but as o
 
 ## General
 
-Build with Java 11 and jUnit 5.
+Build with Java 11 and JUnit 5.
 
 Projects are:
 - [Challenge I](#challenge-i---rock-paper-scissors)
