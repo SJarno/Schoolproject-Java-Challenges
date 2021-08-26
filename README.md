@@ -8,15 +8,19 @@ So these are simple challenge projects related to school I'm studying at the mom
 Mostly for flexing out my Java-skills, and trying some new stuff.
 I'll be making slightly more complicated versions out of some of these, but as of now, this will do.
 
+## General
+
+Build with Java 11 and jUnit 5.
+
 Projects are:
 - [Challenge I](#challenge-i---rock-paper-scissors)
-- [Challenge II]()
-- [Challenge III]()
-- [Challenge IV]()
-- [Challenge V]()
-- [Challenge VI]()
-- [Challenge VII]()
-- [Challenge VIII]()
+- [Challenge II](#challenge-ii---calories-vs-joules)
+- [Challenge III](#challenge-iii---meatpie-proble)
+- [Challenge IV](#challenge-iv---grades)
+- [Challenge V](#challenge-v---empty)
+- [Challenge VI](#challenge-vi---pin-and-puk-codes)
+- [Challenge VII](#challenge-vii---counternumber)
+- [Challenge VIII](#challenge-viii---numbers-to-string)
 
 
 ## Challenge I - Rock, Paper, Scissors
