@@ -1,13 +1,32 @@
 package numberstostring;
 
-import java.util.HashMap;
+
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class App {
+    // constants as static
     static String alleYksitoista[] = { "nolla", "yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi", "seitsemän",
             "kahdeksan", "yhdeksän", "kymmenen" };
 
+    static Map<Integer, String> luvut = Stream
+            .of(new Object[][] { 
+                { 0, "nolla" }, 
+                { 1, "yksi" }, 
+                { 2, "kaksi" }, 
+                { 3, "kolme" }, 
+                { 4, "neljä" },
+                { 5, "viisi" }, 
+                { 6, "kuusi" }, 
+                { 7, "seitsemän" }, 
+                { 8, "kahdeksan" }, 
+                { 9, "yhdeksän" },
+                { 10, "kymmenen" } })
+            .collect(Collectors.toMap(data -> (Integer) data[0], data -> (String) data[1]));
+    // Version with array            
     public static void laskeTaulukolla() {
-        for (int i = 0; i < 41; i++) {
+        for (int i = 0; i < 100; i++) {
             if (i < 20) { // jos alle 20
                 System.out.println(i < 11 ? alleYksitoista[i] : alleYksitoista[i % 10] + "toista");
             } else { // jos on 20 ja yli
@@ -21,31 +40,24 @@ public class App {
         }
 
     }
-
+    // version with map
     public static void laskeHajautustaululla() {
-
+        for (int i = 0; i < 100; i++) {
+            int kymmenet = i / 10;
+            int ykkoset = i % 10;
+            System.out.println(i < 11 ? luvut.get(i)
+                    : i < 20 ? luvut.get(ykkoset) + "toista"
+                            : i % 10 == 0 ? luvut.get(kymmenet) + "kymmentä"
+                                    : luvut.get(kymmenet) + "kymmentä" + luvut.get(ykkoset));
+        }
+    
     }
 
     public static void main(String[] args) {
         // laskeTaulukolla();
-        HashMap<Integer, String> luvut = new HashMap<>();
-        luvut.put(0, "nolla");
-        luvut.put(1, "yksi");
-        luvut.put(2, "kaksi");
-        luvut.put(3, "kolme");
-        luvut.put(4, "neljä");
-        luvut.put(5, "viisi");
-        luvut.put(6, "kuusi");
-        luvut.put(7, "seitsemän");
-        luvut.put(8, "kahdeksan");
-        luvut.put(9, "yhdeksän");
-        luvut.put(10, "kymmenen");
+        laskeHajautustaululla();
 
-        for (int i = 0; i < 31; i++) {
-            int kymmenet = i / 10;
-            int ykkoset = i % 10;
-            System.out.println(i < 11 ? luvut.get(i): i < 20 ? luvut.get(ykkoset)+"toista": i % 10 == 0 ? luvut.get(kymmenet)+"kymmentä": luvut.get(kymmenet)+"kymmentä"+luvut.get(ykkoset));
-        }
+        
     }
 
 }
