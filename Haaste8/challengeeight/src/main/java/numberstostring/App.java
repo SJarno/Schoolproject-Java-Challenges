@@ -4,26 +4,20 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class App {
     // constants as static
     static String alleYksitoista[] = { "nolla", "yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi", "seitsemän",
             "kahdeksan", "yhdeksän", "kymmenen" };
 
     static Map<Integer, String> luvut = Stream
-            .of(new Object[][] { 
-                { 0, "nolla" }, 
-                { 1, "yksi" }, 
-                { 2, "kaksi" }, 
-                { 3, "kolme" }, 
-                { 4, "neljä" },
-                { 5, "viisi" }, 
-                { 6, "kuusi" }, 
-                { 7, "seitsemän" }, 
-                { 8, "kahdeksan" }, 
-                { 9, "yhdeksän" },
-                { 10, "kymmenen" } })
+            .of(new Object[][] { { 0, "nolla" }, { 1, "yksi" }, { 2, "kaksi" }, { 3, "kolme" }, { 4, "neljä" },
+                    { 5, "viisi" }, { 6, "kuusi" }, { 7, "seitsemän" }, { 8, "kahdeksan" }, { 9, "yhdeksän" },
+                    { 10, "kymmenen" } })
             .collect(Collectors.toMap(data -> (Integer) data[0], data -> (String) data[1]));
-    // Version with array            
+
+    // Version with array
     public static void laskeTaulukolla() {
         for (int i = 0; i < 100; i++) {
             if (i < 20) { // jos alle 20
@@ -39,6 +33,7 @@ public class App {
         }
 
     }
+
     // version with map
     public static void laskeHajautustaululla() {
         for (int i = 0; i < 100; i++) {
@@ -49,14 +44,38 @@ public class App {
                             : i % 10 == 0 ? luvut.get(kymmenet) + "kymmentä"
                                     : luvut.get(kymmenet) + "kymmentä" + luvut.get(ykkoset));
         }
-    
+
+    }
+    // muuttaa annetun merkkijonon numerosanamuodoksi
+    public static String muutaSanaksi(String merkkijono) {
+        if (StringUtils.isNumeric(merkkijono)) {
+            int luku = Integer.valueOf(merkkijono);
+            int kymmenet = luku / 10;
+            int ykkoset = luku % 10;
+            return luku < 11 ? luvut.get(luku)
+                : luku < 20 ? luvut.get(ykkoset) + "toista"
+                    : luku % 10 == 0 ? luvut.get(kymmenet) + "kymmentä"
+                        : luvut.get(kymmenet) + "kymmentä" + luvut.get(ykkoset);
+        }
+        return merkkijono;
     }
 
     public static void main(String[] args) {
         // laskeTaulukolla();
-        laskeHajautustaululla();
+        // laskeHajautustaululla();
 
+        String merkkijono = "Herra Huun osoite on tattisuonkatu 4 A 123";
+        String palat[] = merkkijono.split(" ");
+        StringBuilder sb = new StringBuilder();
+
+        for (String string : palat) {
+            sb.append(muutaSanaksi(string)+" ");
+
+        }
+        System.out.println(sb.toString().trim());
         
+        
+
     }
 
 }
