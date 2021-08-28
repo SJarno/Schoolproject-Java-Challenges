@@ -7,4 +7,4 @@
 
 [< Challenge six](../../Haaste7/challengeseven)
 
-[Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
+[<< Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
