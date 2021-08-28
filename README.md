@@ -17,14 +17,7 @@ Projects are:
 - [Challenge II](Haaste2/challengetwo)
 - [Challenge III](Haaste3/challengethree)
 - [Challenge IV](Haaste4/challengefour)
-- [Challenge V](#challenge-v---empty)
+- Challenge V (empty)
 - [Challenge VI](Haaste6/challengesix)
 - [Challenge VII](Haaste7/challengeseven)
 - [Challenge VIII](Haaste8/challengeeight)
-
-
-# Challenge V - (Empty)
-## About
-## Features
-
-
