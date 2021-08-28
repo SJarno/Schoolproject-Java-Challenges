@@ -23,4 +23,5 @@ The program runs as follows:
 Build as a maven project. Requires Java 11 and JUnit 5.x.
 ## Other
 [Challenge two >](Haaste2/challengetwo)
-[Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
+
+[<<Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
