@@ -24,27 +24,28 @@ Projects are:
 
 
 ## Challenge I - Rock, Paper, Scissors
+
 ### About
 
-
+Rock, Paper and Scissors, a well known game for two or more participants. 
 
 ### Assignment
-Kivi, paperi ja sakset on tunnettu kahden tai useamman osanottajan leikki tai peli. Kirjoita ohjelma, jossa pelataan tietokonetta vastaan.
- 
-Voittaja ratkeaa seuraavan kaavan mukaisesti:
+Write a program where the player plays against a computer.
 
-Kivi voittaa sakset (kivellä voi rikkoa sakset eikä saksilla voi leikata kiveä)
-Paperi voittaa kiven (kiven voi peittää paperilla)
-Sakset voittaa paperin (saksilla voi leikata paperia)
-Mikäli molemmat saavat saman, tilanne on tasapeli ja pelikierros uusitaan.
+The winner is defined as follows:
+- Rock defeats scissors (scissors can be broken with a rock, and scissors cant cut rock)
+- Paper defeats rock (paper can cover a rock)
+- Scissors defeats paper (scissors can cut paper)
 
-Ohjelman kulku olkoon seuraava:
+If both players have the same selection, the round is a tie, and wil be replayed.
 
-Tietokone aloittaa kysymällä: 1 = Kivi, 2 = Paperi, 3 = Sakset ?
-Pelaaja valitsee yhden vaihtoehdoista, johon tietokone vastaa omalla valinnalla.
-Ohjelma julistaa voittajan
+The program runs as follows:
+1. The computer starts asking the following: 1 = Rock, 2 = Paper, 3 = Scissors?
+2. The player chooses on of the above options, and the compuer counters with its own.
+3. The program declares the winner of the round
 
 ### Features
+Build as a maven project. Requires Java 11 and JUnit 5.x.
 
 ## Challenge II - Calories vs Joules
 ### About
@@ -72,4 +73,14 @@ Ohjelma julistaa voittajan
 
 ## Challenge VIII - Numbers to String
 ### About
+### Assignment
+#### Stage 1.
+Make a method that transforms numbers in string to string representations. The modifidable is passed as a parameter from another class, and the method returns the result back to the calling class.
+Example:
+Original text: "Mister Huu's address is tattisuonkatu 4 A 123".
+Modified text/result: "Mister Huu's addres is tattisuonkatu neljä A satakaksikymmentäkolme".
+#### Stage 2.
+Refactor the method so that the program reads the original text from a textfile.
+#### Stage 3 (optional)
+Refactor the program so that it saves the modified thext to a textfile.
 ### Features
