@@ -1,5 +1,8 @@
 # Challenge II - Calories vs Joules
 ## About
 ## Features
+[Challenge three>](Haaste3/challengethree)
 
-[Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
+[<Challenge one](Haaste1/challengeone)
+
+[<<Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
