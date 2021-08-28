@@ -16,4 +16,6 @@ Refactor the program so that it saves the modified thext to a textfile.
 ## Features
 A Maven project, added dependancy for StringUtils.
 ## Other
+[< Challenge seven](../../Haaste7/challengeseven)
+
 [Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
