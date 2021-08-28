@@ -1,10 +1,10 @@
 # Challenge I - Rock, Paper, Scissors
 
-### About
+## About
 
 Rock, Paper and Scissors, a well known game for two or more participants. 
 
-### Assignment
+## Assignment
 Write a program where the player plays against a computer.
 
 The winner is defined as follows:
@@ -19,7 +19,8 @@ The program runs as follows:
 2. The player chooses on of the above options, and the compuer counters with its own.
 3. The program declares the winner of the round
 
-### Features
+## Features
 Build as a maven project. Requires Java 11 and JUnit 5.x.
-
+## Other
+[Challenge two >](Haaste2/challengetwo)
 [Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
