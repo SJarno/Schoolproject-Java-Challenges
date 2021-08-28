@@ -12,6 +12,8 @@ I'll be making slightly more complicated versions out of some of these, but as o
 
 Build with Java 11 and JUnit 5.
 
+You can navigate to the project files and readme via provided links below.
+
 Projects are:
 - [Challenge I](Haaste1/challengeone)
 - [Challenge II](Haaste2/challengetwo)
