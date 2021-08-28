@@ -2,5 +2,9 @@
 ## About
 ## Features
 
+## Other
+[Challenge six>](../../Haaste6/challengesix)
 
-[Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
+[<Challenge three](../../Haaste3/challengethree)
+
+[<<Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
