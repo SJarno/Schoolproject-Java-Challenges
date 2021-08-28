@@ -21,3 +21,5 @@ The program runs as follows:
 
 ### Features
 Build as a maven project. Requires Java 11 and JUnit 5.x.
+
+[Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
