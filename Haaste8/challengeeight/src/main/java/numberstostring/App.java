@@ -8,25 +8,25 @@ import org.apache.commons.lang3.StringUtils;
 
 public class App {
     // constants as static
-    static String alleYksitoista[] = { "nolla", "yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi", "seitsemän",
+    static String oneToTen[] = { "nolla", "yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi", "seitsemän",
             "kahdeksan", "yhdeksän", "kymmenen" };
-
-    static Map<Integer, String> luvut = Stream
-            .of(new Object[][] { { 0, "nolla" }, { 1, "yksi" }, { 2, "kaksi" }, { 3, "kolme" }, { 4, "neljä" },
-                    { 5, "viisi" }, { 6, "kuusi" }, { 7, "seitsemän" }, { 8, "kahdeksan" }, { 9, "yhdeksän" },
-                    { 10, "kymmenen" } })
-            .collect(Collectors.toMap(data -> (Integer) data[0], data -> (String) data[1]));
 
     // Version with array
     public static void laskeTaulukolla() {
-        for (int i = 0; i < 100; i++) {
+
+        for (int i = 100; i <= 110; i++) {
+            int ykkoset = i % 10;
+            int kymmenet = i / 10;
+            int sadat = i / 100;
             if (i < 20) { // jos alle 20
-                System.out.println(i < 11 ? alleYksitoista[i] : alleYksitoista[i % 10] + "toista");
-            } else { // jos on 20 ja yli
-                int ykkoset = i % 10;
-                int kymmenet = i / 10;
-                System.out.println(i % 10 == 0 ? alleYksitoista[kymmenet] + "kymmentä"
-                        : alleYksitoista[kymmenet] + "kymmentä" + alleYksitoista[ykkoset]);
+                System.out.println(i < 11 ? oneToTen[i] : oneToTen[i % 10] + "toista");
+            } else if (i >= 20 && i < 100) { // if 20 and above
+                System.out.println(i % 10 == 0 && kymmenet < 10 ? oneToTen[kymmenet] + "kymmentä"
+                        : oneToTen[kymmenet] + "kymmentä" + oneToTen[ykkoset]);
+
+            } else if (i >= 100) { // if 100 and above
+                System.out.println(
+                        i == 100 ? "sata" : sadat == 1 && ykkoset < 11 ? "sata" + oneToTen[ykkoset] : "");
 
             }
 
@@ -34,48 +34,46 @@ public class App {
 
     }
 
-    // version with map
-    public static void laskeHajautustaululla() {
-        for (int i = 0; i < 100; i++) {
-            int kymmenet = i / 10;
-            int ykkoset = i % 10;
-            System.out.println(i < 11 ? luvut.get(i)
-                    : i < 20 ? luvut.get(ykkoset) + "toista"
-                            : i % 10 == 0 ? luvut.get(kymmenet) + "kymmentä"
-                                    : luvut.get(kymmenet) + "kymmentä" + luvut.get(ykkoset));
-        }
-
-    }
-    // muuttaa annetun merkkijonon numerosanamuodoksi
-    public static String muutaSanaksi(String merkkijono) {
-        if (StringUtils.isNumeric(merkkijono)) {
-            int luku = Integer.valueOf(merkkijono);
-            int kymmenet = luku / 10;
-            int ykkoset = luku % 10;
-            return luku < 11 ? luvut.get(luku)
-                : luku < 20 ? luvut.get(ykkoset) + "toista"
-                    : luku % 10 == 0 ? luvut.get(kymmenet) + "kymmentä"
-                        : luvut.get(kymmenet) + "kymmentä" + luvut.get(ykkoset);
-        }
-        return merkkijono;
-    }
 
     public static void main(String[] args) {
-        // laskeTaulukolla();
-        // laskeHajautustaululla();
 
-        String merkkijono = "Herra Huun osoite on tattisuonkatu 4 A 123";
-        String palat[] = merkkijono.split(" ");
-        StringBuilder sb = new StringBuilder();
-
-        for (String string : palat) {
-            sb.append(muutaSanaksi(string)+" ");
-
+        for (int i = 100; i < 1000; i++) {
+            System.out.println(changeNumberToString(String.valueOf(i)));
         }
-        System.out.println(sb.toString().trim());
         
-        
+        /*
+         * String merkkijono = "Herra Huun osoite on tattisuonkatu 4 A 100"; String
+         * palat[] = merkkijono.split(" "); StringBuilder sb = new StringBuilder();
+         * 
+         * for (String string : palat) { sb.append(changeNumbeString(string)+" ");
+         * 
+         * } System.out.println(sb.toString().trim());
+         */
 
+    }
+
+    public static String changeNumberToString(String merkkijono) {
+        StringBuilder sb = new StringBuilder();
+        if (StringUtils.isNumeric(merkkijono)) {
+            int luku = Integer.valueOf(merkkijono);
+            int kymmenet = (luku % 100 - luku % 10) / 10;
+
+            String sadat = luku / 100 < 1 ? ""
+                    : luku < 200 ? "sata" : luku / 100 > 1 ? oneToTen[luku / 100] + "sataa" : "";
+
+            String kymmenetString = kymmenet > 1 ? oneToTen[kymmenet] + "kymmentä" 
+                    : "";
+            String ykkoset = luku < 10 ? oneToTen[luku % 10]
+                    : kymmenet == 1 && luku % 10 == 0 ? oneToTen[10]
+                    : kymmenet == 1 ? oneToTen[luku % 10] + "toista" 
+                    : luku % 10 != 0 ? oneToTen[luku % 10]: "";
+
+            sb.append(sadat);
+            sb.append(kymmenetString);
+            sb.append(ykkoset);
+            return sb.toString();
+        }
+        return merkkijono;
     }
 
 }
