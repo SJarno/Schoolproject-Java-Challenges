@@ -16,7 +16,7 @@ public class StringParser {
         return this.parsedText;
     }
     public void readInput(String input) {
-        this.originalText = input;
+        this.originalText = input.trim();
     }
     public void parseText() {
         String parts[] = this.originalText.split(" ");
