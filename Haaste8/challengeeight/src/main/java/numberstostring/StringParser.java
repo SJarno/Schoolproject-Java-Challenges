@@ -2,14 +2,15 @@ package numberstostring;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class StringMutator {
+public class StringParser {
     private String originalText;
     private String parsedText;
     String oneToTen[] = { "nolla", "yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi", "seitsemän",
             "kahdeksan", "yhdeksän", "kymmenen" };
 
-    public StringMutator() {
-        
+    
+    public String getOriginalText() {
+        return this.originalText;
     }
     public String getParsedText() {
         return this.parsedText;
