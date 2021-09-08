@@ -3,8 +3,8 @@
 ## Features
 
 ## Other
-[Challenge eight >](../../Haaste7/challengeseven)
+[Challenge seven >](../../Haaste7/challengeseven)
 
-[< Challenge six](../../Haaste5/challengefive)
+[< Challenge five](../../Haaste5/challengefive)
 
 [<< Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
