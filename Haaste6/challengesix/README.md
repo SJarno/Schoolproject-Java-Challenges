@@ -1,10 +1,10 @@
-# Challenge VI - PIN and Puk Codes
+# Challenge VI - Counternumber
 ## About
 ## Features
 
 ## Other
-[Challenge seven >](../../Haaste7/challengeseven)
+[Challenge eight >](../../Haaste7/challengeseven)
 
-[< Challenge four](../../Haaste4/challengefour)
+[< Challenge six](../../Haaste5/challengefive)
 
-[Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
+[<< Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
