@@ -1,10 +1,10 @@
-# Challenge VII - Counternumber
+# Challenge VI - Counternumber
 ## About
 ## Features
 
 ## Other
-[Challenge eight >](../../Haaste8/challengeeight)
+[Challenge eight >](../../Haaste7/challengeseven)
 
-[< Challenge six](../../Haaste6/challengesix)
+[< Challenge six](../../Haaste5/challengefive)
 
 [<< Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)

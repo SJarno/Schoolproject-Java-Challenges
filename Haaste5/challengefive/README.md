@@ -1,9 +1,9 @@
-# Challenge VI - PIN and Puk Codes
+# Challenge V - PIN and Puk Codes
 ## About
 ## Features
 
 ## Other
-[Challenge seven >](../../Haaste7/challengeseven)
+[Challenge seven >](../../Haaste6/challengesix)
 
 [< Challenge four](../../Haaste4/challengefour)
 

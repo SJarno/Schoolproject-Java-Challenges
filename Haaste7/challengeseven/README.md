@@ -1,4 +1,4 @@
-# Challenge VIII - Numbers to String
+# Challenge VII - Numbers to String
 ## About
 ## Assignment
 ### Stage 1.
@@ -21,6 +21,6 @@ So I did extensive tests while buildin up the actual method that changes integer
 This is probably something to be avoides, but thats how I did. 
 Next step is to build the actual class that handles file reading and the integer converting. And some more tests for that.
 ## Other
-[< Challenge seven](../../Haaste7/challengeseven)
+[< Challenge seven](../../Haaste6/challengsix)
 
 [<< Back to root](https://github.com/SJarno/Schoolproject-Java-Challenges)
