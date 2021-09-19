@@ -19,6 +19,7 @@ public class GameLogic {
         choices.put(2, RPS.PAPER);
         choices.put(3, RPS.SCISSORS);
     }
+
     public void setPlayers(Player humanPlayer, Player compPlayer) {
         this.humanPlayer = humanPlayer;
         this.computerPlayer = compPlayer;
@@ -56,6 +57,7 @@ public class GameLogic {
     }
 
     public String statistics() {
-        return humanPlayer.getName()+": " + humanPlayer.getWinnings() + " - "+computerPlayer.getName()+": " + computerPlayer.getWinnings();
+        return humanPlayer.getName() + ": " + humanPlayer.getWinnings() + " - " + computerPlayer.getName() + ": "
+                + computerPlayer.getWinnings();
     }
 }

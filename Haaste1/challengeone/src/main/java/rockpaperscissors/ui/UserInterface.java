@@ -77,7 +77,7 @@ public class UserInterface {
             if (gameLogic.playerWon(playerChoice, computerChoice)) {
                 System.out.println("Pelaaja voitti! :D");
             } else {
-                System.out.println(gameLogic.getComputerPlayer().getName()+" voitti! :((");
+                System.out.println(gameLogic.getComputerPlayer().getName() + " voitti! :((");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -90,7 +90,8 @@ public class UserInterface {
             System.out.println("Valitsit " + gameLogic.getChoice(userChoice));
             int computerChoice = gameLogic.getComputerPlayer().getRandomNumber();
             System.out.println(gameLogic.getComputerPlayer().getName() + " valitsee...");
-            System.out.println(gameLogic.getComputerPlayer().getName()+" valitsi " + gameLogic.getChoice(computerChoice));
+            System.out.println(
+                    gameLogic.getComputerPlayer().getName() + " valitsi " + gameLogic.getChoice(computerChoice));
             System.out.println();
             defineWinner(userChoice, computerChoice);
             System.out.println();

@@ -2,10 +2,7 @@ package rockpaperscissors;
 
 import java.util.Scanner;
 
-import rockpaperscissors.domain.ComputerPlayer;
-import rockpaperscissors.domain.HumanPlayer;
 import rockpaperscissors.logic.GameLogic;
-import rockpaperscissors.logic.RPS;
 import rockpaperscissors.ui.UserInterface;
 
 public class App {

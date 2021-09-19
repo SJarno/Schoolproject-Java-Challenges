@@ -4,8 +4,10 @@
     "-//Puppy Crawl//DTD Suppressions 1.1//EN"
     "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
 
-    <!-- Leave out possible javafx -->
+    <!-- Leave out possible ui -->
 <suppressions>
-    <suppress files="todoapp.ui.TodoUi.java" checks="[a-zA-Z0-9]*"/>
-    <suppress files="todoapp.ui.GuiHelper.java" checks="[a-zA-Z0-9]*"/>
+    <!-- Example: -->
+    <!-- <suppress files="todoapp.ui.TodoUi.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="todoapp.ui.GuiHelper.java" checks="[a-zA-Z0-9]*"/> -->
+    <suppress files="rockpaperscissors.ui.UserInterface.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>

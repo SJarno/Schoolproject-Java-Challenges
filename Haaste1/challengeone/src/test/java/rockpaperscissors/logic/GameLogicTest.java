@@ -27,6 +27,7 @@ public class GameLogicTest {
         this.gameLogic.setPlayers(humPlayer, compPlayer);
 
     }
+
     @Test
     void testStatistics() {
         assertEquals("keijo: 0 - kone: 0", gameLogic.statistics());
@@ -72,7 +73,7 @@ public class GameLogicTest {
 
     @Test
     void testPlayerWins() {
-        // Rock wins scissors, player wins, com loses 
+        // Rock wins scissors, player wins, com loses
         assertTrue(this.gameLogic.playerWon(1, 3));
         // Rock loses to paper
         assertFalse(this.gameLogic.playerWon(1, 2));
@@ -86,9 +87,8 @@ public class GameLogicTest {
         assertFalse(this.gameLogic.playerWon(3, 1));
     }
 
-
     @ParameterizedTest
-    @ValueSource(ints = {1, 2, 3})
+    @ValueSource(ints = { 1, 2, 3 })
     void testTieInPlayerWins(int number) {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             gameLogic.playerWon(number, number);
@@ -99,15 +99,16 @@ public class GameLogicTest {
         assertEquals(0, gameLogic.getComputerPlayer().getWinnings());
         assertEquals(0, gameLogic.getComputerPlayer().getLosses());
     }
+
     @Test
     void testWinngingsAndLosses() {
-        //player wins, comp loses - Rock vs Scissors
+        // player wins, comp loses - Rock vs Scissors
         this.gameLogic.playerWon(1, 3);
         assertEquals(1, gameLogic.getHumanPlayer().getWinnings());
         assertEquals(0, gameLogic.getHumanPlayer().getLosses());
         assertEquals(0, gameLogic.getComputerPlayer().getWinnings());
         assertEquals(1, gameLogic.getComputerPlayer().getLosses());
-        //player loses, comp wins - Rock vs Paper
+        // player loses, comp wins - Rock vs Paper
         this.gameLogic.playerWon(1, 2);
         assertEquals(1, gameLogic.getHumanPlayer().getWinnings());
         assertEquals(1, gameLogic.getHumanPlayer().getLosses());
@@ -138,6 +139,5 @@ public class GameLogicTest {
         assertEquals(3, gameLogic.getComputerPlayer().getWinnings());
         assertEquals(3, gameLogic.getComputerPlayer().getLosses());
     }
-
 
 }
