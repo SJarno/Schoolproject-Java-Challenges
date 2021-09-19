@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
+import rockpaperscissors.domain.ComputerPlayer;
+
 public class ComputerPlayerTest {
 
     private ComputerPlayer computerPlayer;
@@ -18,7 +20,7 @@ public class ComputerPlayerTest {
 
     @Test
     public void testDefaultValues() {
-        assertEquals("Computer player", computerPlayer.getId());
+        assertEquals("Computer player", computerPlayer.getName());
         assertEquals(0, computerPlayer.getLosses());
         assertEquals(0, computerPlayer.getWinnings());
     }

@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import rockpaperscissors.domain.HumanPlayer;
+
 public class HumanPlayerTest {
 
     private HumanPlayer humanPlayer;
@@ -16,7 +18,7 @@ public class HumanPlayerTest {
 
     @Test
     public void defaultValues() {
-        assertEquals("Humanplayer", humanPlayer.getId());
+        assertEquals("Humanplayer", humanPlayer.getName());
         assertEquals(0, humanPlayer.getLosses());
         assertEquals(0, humanPlayer.getWinnings());
     
