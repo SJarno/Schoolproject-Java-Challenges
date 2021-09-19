@@ -12,29 +12,37 @@ public class UserInterface {
         this.converter = converter;
         this.scanner = scanner;
     }
-    private void results() {
 
+    private void instructions() {
+        System.out.println("Valikko:");
+        System.out.println("1.Kalorit jouleiksi");
+        System.out.println("2.Joulet kaloreiksi");
+        System.out.print("Valitse muunnos:");
     }
+
+    private void handleChoices(String input) {
+        if (input.equals("1")) {
+            System.out.println("Kalorit: ");
+            double tulos = converter.convertCaloriesToJoules(Double.valueOf(scanner.nextLine().trim()));
+            System.out.println("Tulos: " + tulos + " joulea");
+        } else if (input.equals("2")) {
+            System.out.println("Joulet:");
+            System.out.println("Tulos: " + converter.convertJoulesToCalories(Double.valueOf(scanner.nextLine().trim()))
+                    + " kaloria");
+        }
+    }
+
     public void init() {
         while (true) {
-            System.out.println("Valikko:");
-            System.out.println("1.Kalorit jouleiksi");
-            System.out.println("2.Joulet kaloreiksi");
-            System.out.print("Valitse muunnos:");
-            String valinta = scanner.nextLine();
-            if (valinta.equals("X")) {
+            instructions();
+            String input = scanner.nextLine().trim();
+            if (input.equals("X")) {
                 System.out.println("Poistutaan ohjelmasta");
                 break;
             }
-            if (valinta.equals("1")) {
-                System.out.println("Kalorit: ");
-                double tulos = converter.convertCaloriesToJoules(Double.valueOf(scanner.nextLine()));
-                System.out.println("Tulos: "+tulos+" joulea");
-            } else if (valinta.equals("2")) {
-                System.out.println("Joulet:");
-                System.out.println("Tulos: "+converter.convertJoulesToCalories(Double.valueOf(scanner.nextLine()))+" kaloria");
-            }
+            handleChoices(input);
+
         }
     }
-    
+
 }
