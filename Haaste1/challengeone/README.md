@@ -21,6 +21,7 @@ The program runs as follows:
 
 ## Features
 Build as a maven project. Requires Java 11 and JUnit 5.x.
+- Checstyle and jacoco added for reports
 ## Other
 [Challenge two >](../../Haaste2/challengetwo)
 
