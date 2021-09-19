@@ -55,7 +55,7 @@ public class UserInterface {
     private void instructions() {
         System.out.println();
         System.out.println("Valinnat: ");
-        System.out.println("1)Kivi, 2)paperi, 3)sakset");
+        System.out.println("1 = Kivi, 2 = Paperi, 3 = Sakset");
         System.out.println("Pelaaja valitsee...");
     }
 
