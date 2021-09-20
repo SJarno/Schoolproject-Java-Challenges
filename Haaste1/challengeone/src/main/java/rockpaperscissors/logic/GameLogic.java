@@ -3,8 +3,6 @@ package rockpaperscissors.logic;
 import java.util.HashMap;
 import java.util.Map;
 
-import rockpaperscissors.domain.ComputerPlayer;
-import rockpaperscissors.domain.HumanPlayer;
 import rockpaperscissors.domain.Player;
 
 public class GameLogic {
