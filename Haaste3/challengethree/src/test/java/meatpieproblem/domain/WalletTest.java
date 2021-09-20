@@ -1,6 +1,5 @@
 package meatpieproblem.domain;
 
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -14,7 +13,7 @@ public class WalletTest {
     public void setUp() {
         this.wallet = new Wallet(100);
     }
-    
+
     @Test
     void testAdd() {
         assertEquals(100, wallet.getValue());
@@ -49,7 +48,7 @@ public class WalletTest {
         });
         assertEquals("Arvo ei saa olla negatiivinen", exception.getMessage());
         assertEquals(true, wallet.checkValue(1));
-        
+
     }
 
     @Test
@@ -68,21 +67,18 @@ public class WalletTest {
         wallet.take(0.9);
         assertEquals(99.1, wallet.getValue());
         try {
-            wallet.take(100);  
+            wallet.take(100);
         } catch (Exception e) {
             assertEquals(99.1, wallet.getValue());
         }
-        
+
         wallet.take(99.1);
         assertEquals(0, wallet.getValue());
         try {
-           wallet.take(1); 
+            wallet.take(1);
         } catch (Exception e) {
             assertEquals(0, wallet.getValue());
         }
-        
-        
-        
 
     }
 }
