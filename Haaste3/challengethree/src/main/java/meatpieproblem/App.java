@@ -1,11 +1,8 @@
 package meatpieproblem;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.Scanner;
 
 import meatpieproblem.domain.Meatpie;
-import meatpieproblem.domain.MoneyStorage;
 import meatpieproblem.domain.Wallet;
 import meatpieproblem.ui.UserInterface;
 

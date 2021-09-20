@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import meatpieproblem.domain.Grocery;
 import meatpieproblem.domain.MoneyStorage;
-import meatpieproblem.domain.Wallet;
 
 public class UserInterface {
     private List<Grocery> storage;
