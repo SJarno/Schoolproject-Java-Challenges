@@ -1,7 +1,7 @@
 package grades.domain;
 
 public enum Grade {
-    ZERO("Hylätty", "Failure"), 
+    ZERO("Hylätty", "Fail"), 
     ONE("Välttävä", "Pass"), 
     TWO("Tyydyttävä", "Satisfactory"), 
     THREE("Hyvä", "Good"), 
