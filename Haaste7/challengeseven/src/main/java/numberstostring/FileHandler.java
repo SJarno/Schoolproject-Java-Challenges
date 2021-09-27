@@ -2,6 +2,7 @@ package numberstostring;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -34,8 +35,12 @@ public class FileHandler {
     public String getParsedText() {
         return stringParser.getParsedText();
     }
-    public void writeToFile() {
-
+    public void writeToFile(String filename) {
+        try (PrintWriter printWriter = new PrintWriter(filename)) {
+            printWriter.print(getParsedText());
+        } catch (Exception e) {
+            System.out.println("Virhe tallennuksessa");
+        }
     }
     
     

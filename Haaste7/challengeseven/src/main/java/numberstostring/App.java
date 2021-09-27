@@ -20,6 +20,7 @@ public class App {
          System.out.println(fileHandler.getOriginalText());
          fileHandler.parseOriginalText();
          System.out.println(fileHandler.getParsedText());
+         fileHandler.writeToFile("toinentesti.txt");
          /* String testi = "7. 7. 7.";
          System.out.println(testi.replace(".", "_.")); */
          
