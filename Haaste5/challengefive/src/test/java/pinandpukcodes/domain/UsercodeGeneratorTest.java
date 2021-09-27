@@ -1,7 +1,9 @@
 package pinandpukcodes.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Collections;
 import java.util.List;
@@ -16,7 +18,7 @@ public class UsercodeGeneratorTest {
 
     @BeforeEach
     void setUp() {
-        this.uGenerator = new UsercodeGenerator();
+        this.uGenerator = new UsercodeGenerator(4, 8);
     }
 
     @ParameterizedTest
@@ -36,5 +38,12 @@ public class UsercodeGeneratorTest {
             uGenerator.generateCode(length);
         });
         assertEquals("Pituus ei saa olla alle näljä tai yli kahdeksan", exception.getMessage());
+    }
+    @Test
+    void codeLengthChecks() {
+        assertTrue(uGenerator.codeLengthIShortOrLong(3));
+        assertFalse(uGenerator.codeLengthIShortOrLong(4));
+        assertFalse(uGenerator.codeLengthIShortOrLong(8));
+        assertTrue(uGenerator.codeLengthIShortOrLong(9));
     }
 }
