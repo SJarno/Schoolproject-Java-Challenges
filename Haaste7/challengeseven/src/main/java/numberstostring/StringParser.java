@@ -1,6 +1,5 @@
 package numberstostring;
 
-import org.apache.commons.lang3.StringUtils;
 
 public class StringParser {
     private String originalText;
@@ -16,35 +15,38 @@ public class StringParser {
         return this.parsedText;
     }
     public void readInput(String input) {
-        this.originalText = input.trim();
+        this.originalText = input;
     }
     public void parseText() {
+        originalText = originalText.replace(".", " .");
         String parts[] = this.originalText.split(" ");
         StringBuilder sb = new StringBuilder();
         for (String string : parts) {
             sb.append(changeNumberToString(string)+" ");
         }
+        
         this.parsedText = sb.toString().trim();
+        parsedText = parsedText.replace(" .", ".");
     }
     private String changeNumberToString(String input) {
         StringBuilder sb = new StringBuilder();
-        if (StringUtils.isNumeric(input)) {
-            int luku = Integer.valueOf(input);
-            int kymmenet = (luku % 100 - luku % 10) / 10;
+        if (input.matches("\\d+")) {
+            int value = Integer.valueOf(input);
+            int tens = (value % 100 - value % 10) / 10;
 
-            String sadat = luku / 100 < 1 ? ""
-                    : luku < 200 ? "sata" : luku / 100 > 1 ? oneToTen[luku / 100] + "sataa" : "";
+            String hundredsString = value / 100 < 1 ? ""
+                    : value < 200 ? "sata" : value / 100 > 1 ? oneToTen[value / 100] + "sataa" : "";
 
-            String kymmenetString = kymmenet > 1 ? oneToTen[kymmenet] + "kymmentä" 
+            String tensString = tens > 1 ? oneToTen[tens] + "kymmentä" 
                     : "";
-            String ykkoset = luku < 10 ? oneToTen[luku % 10]
-                    : kymmenet == 1 && luku % 10 == 0 ? oneToTen[10]
-                    : kymmenet == 1 ? oneToTen[luku % 10] + "toista" 
-                    : luku % 10 != 0 ? oneToTen[luku % 10]: "";
+            String onesString = value < 10 ? oneToTen[value % 10]
+                    : tens == 1 && value % 10 == 0 ? oneToTen[10]
+                    : tens == 1 ? oneToTen[value % 10] + "toista" 
+                    : value % 10 != 0 ? oneToTen[value % 10]: "";
 
-            sb.append(sadat);
-            sb.append(kymmenetString);
-            sb.append(ykkoset);
+            sb.append(hundredsString);
+            sb.append(tensString);
+            sb.append(onesString);
             return sb.toString();
         }
         return input;
